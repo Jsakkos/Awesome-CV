@@ -9,6 +9,6 @@ jobs:
       - name: Compile LaTeX document
         uses: xu-cheng/latex-action@v2
         with:
-          root_file: SakkosCV.tex
+          root_file: examples/cv.tex
           latexmk_use_xelatex: true
 
