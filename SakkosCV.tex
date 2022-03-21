@@ -31,15 +31,14 @@
 \fontdir[fonts/] % Specify the location of the included fonts
 
 % Color for highlights
-\colorlet{awesome}{awesome-red} % Default colors include: awesome-emerald, awesome-skyblue, awesome-red, awesome-pink, awesome-orange, awesome-nephritis, awesome-concrete, awesome-darknight
-%\definecolor{awesome}{HTML}{CA63A8} % Uncomment if you would like to specify your own color
-
+%\colorlet{awesome}{awesome-nephritis} % Default colors include: awesome-emerald, awesome-skyblue, awesome-red, awesome-pink, awesome-orange, awesome-nephritis, awesome-concrete, awesome-darknight
+\definecolor{awesome}{HTML}{414141} % Uncomment if you would like to specify your own color
+\setbool{acvSectionColorHighlight}{false}
 % Colors for text - uncomment and modify
-%\definecolor{darktext}{HTML}{414141}
-%\definecolor{text}{HTML}{414141}
-%\definecolor{graytext}{HTML}{414141}
+%\definecolor{darktext}{HTML}{c9c9c9} %light gray
+%\definecolor{text}{HTML}{54bf26} %green
+%\definecolor{graytext}{HTML}{9c4343} %red
 %\definecolor{lighttext}{HTML}{414141}
-
 \renewcommand{\acvHeaderSocialSep}{\quad\textbar\quad} % If you would like to change the social information separator from a pipe (|) to something else
 %----------------------------------------------------------------------------------------
 %	PERSONAL INFORMATION
@@ -51,9 +50,9 @@
 %\mobile{}
 
 \email{sakkosjo@msu.edu}
-%\homepage{www.jonathansakkos.com}
-%\github{}
-%\linkedin{}
+\homepage{www.jonathanksakkos.com}
+\github{jsakkos}
+\linkedin{jonathan-sakkos}
 %\skype{skypeid}
 %\stackoverflow{SOid}{SOname}
 %\twitter{@twit}
@@ -62,37 +61,495 @@
 %\xing{xing name}
 %\extrainfo{test} % Other text you want to include on this line
 
-\position{Mechanical Engineer} % Your expertise/fields
+\position{Scientist $\cdot$Engineered Living Materials} % Your expertise/fields
 
 
 \makecvfooter{\today}{Jonathan K. Sakkos}{\thepage} % Specify the letter footer with 3 arguments: (<left>, <center>, <right>), leave any of these blank if they are not needed
 
 %----------------------------------------------------------------------------------------
 
+\usepackage{bibentry}
 \begin{document}
+\begin{sloppypar}
+\nobibliography{pubs.bib}
+\bibliographystyle{ieeetr}	
 \makecvheader % Print the header
+
+
 %----------------------------------------------------------------------------------------
 %	CV/RESUME CONTENT
 %	Each section is imported separately, open each file in turn to modify content
 %----------------------------------------------------------------------------------------
 
-\input{cv-sections/education.tex}
-\input{cv-sections/skills.tex}
-\input{cv-sections/publications.tex}
-\newpage
-\input{cv-sections/patents.tex}
-\input{cv-sections/honors.tex}
-\input{cv-sections/invited_talks.tex}
-\input{cv-sections/presentation.tex}
-\input{cv-sections/experience.tex}
+%\input{cv-sections/education.tex}
+\cvsection{Education}
+\begin{cventries}
+	
+	%------------------------------------------------
+	
+	\cventry
+	{Ph.D. in Mechanical Engineering} % Degree
+	{University of Minnesota} % Institution
+	{2012 – 2018} % Date(s)
+	{Minneapolis, MN} % Location
+	{ % Description(s) bullet points
+		\begin{cvitems}
+			\item {Advisor: Alptekin Aksan, Ph.D.}
+			\item{Co-advisor: Lawrence P. Wackett, Ph.D.}
+			\item{Thesis: “Engineering Biocatalytic Materials: Encapsulation Systems for Biotechnology”
+			}
+		\end{cvitems}
+	}
+	
+	\cventry
+	{B.S. in Mechanical Engineering}
+	{Universty of Portland}
+	{2005-2009}
+	{Portland, OR}
+	{	}
+\end{cventries}
 
-\input{cv-sections/students.tex}
-%\newpage % Force a new page for looks
+%\input{cv-sections/skills.tex}
+\cvsection{Skills}
+\begin{cvskills}
+	
+	\cvskill
+	{Engineering \faWrench}
+	{Synthetic Biology, Biointerfaces, Bioencapsulation, Sol-Gel Synthesis, Biomaterials}
+	
+	\cvskill
+	{Characterization \faMicroscope } % Category
+	{Microscopy, Spectroscopy, Mechanical Testing, Contact Angle} % Skills
+	
+	\cvskill
+	{Computation \faMicrochip} % Category
+	{Python, Solid Modelling, High-Performance Computing, Image Analysis, Applied Machine Learning} % Skills
+	
+	%------------------------------------------------
 
+\end{cvskills}
+%\input{cv-sections/publications.tex}
+\cvsection{Publications}
 
+\cvsubsection{Peer-Reviewed Journal Articles}
+\begin{cvparagraph}
+	\begin{enumerate}
+		\item{\bibentry{Fuentes-cabrera2022} \textit{(under review)}}
+		\item{\bibentry{Sakkos2021b} \textit{(revision)}}
+		\item{\bibentry{Singh2022}}
+		\item {\bibentry{Sakkos2021a}}
+		\item{\bibentry{Young2019}}
+		\item{\bibentry{Schwab2019}}
+		\item{\bibentry{Sakkos2019}}
+		\item{\bibentry{Benson2018}}
+		\item{\bibentry{Zhu2018}}
+		\item{\bibentry{Sakkos2017}}
+		\item{\bibentry{Mutlu2016}}
+		\item{\bibentry{Sakkos2015}}
+		
+	\end{enumerate}
+\end{cvparagraph}
+\cvsubsection{Conference Proceedings}
+\begin{cvparagraph}
+	\begin{enumerate}
+		
+		\item {J.K. Sakkos, D.P. Kieffer, B.R. Mutlu, L.P. Wackett, A. Aksan “Design of Porous Silica Gels for Bioremediation of Aromatic Hydrocarbons” \textit{Northeast Bioengineering Conference}, Troy, NY, USA, 2015.}
+	\end{enumerate}
+\end{cvparagraph}
+\cvsubsection{Manuscripts in Preparation}
+\begin{cvparagraph}
+	\begin{enumerate}
+		\item{\bibentry{Kokarakis-Rillema2022}}
+		\item{\bibentry{Santos-merino2022}}
+		\item{\bibentry{Sakkos2022}}
+		
+	\end{enumerate}
+\end{cvparagraph}
 
+%\newpage
+%\input{cv-sections/patents.tex}
+\cvsection{Patents}
+%------------------------------------------------
+\begin{cvparagraph}
+	\begin{enumerate}
+		\item {A. Radian, B.R. Mutlu, J.K. Sakkos, A. Aksan, L.P. Wackett, 2015, \textit{“Compositions Including A Silica Matrix And Biomaterial, Methods Regarding The Same And Uses Thereof,”} U.S. Patent Application Number 14/883,053}
+		\item {L.P. Wackett, A. Aksan, J.K. Sakkos, T. Dodge, 2017, \textit{“Cyanuric Acid Remediation,”} U.S. Patent Application Number 62/486,491}
+		\item {J.K. Sakkos, L.P. Wackett, A. Aksan, 2018, \textit{"Biological Assembly Including Biological Component and Shield"} U.S Patent 16/959,812 pending, International Patent Application PCT/US2018/068154}		
+		
+	\end{enumerate}
+\end{cvparagraph}
+%\input{cv-sections/honors.tex}
+\cvsection{Honors \& Awards}
 
+\begin{cvhonors}
+	
+	\cvhonor
+	{Joachim and Yuko Heberlein Award} % Award
+	{Department of Mechanical Engineering, University of Minnesota} % Event
+	{Minneapolis, MN} % Location
+	{2017} % Date(s)
+
+	\cvhonor
+	{BioTechnology Institute Travel Award} % Award
+	{University of Minnesota} % Event
+	{Minneapolis, MN} % Location
+	{2015} % Date(s)
+	
+	\cvhonor
+	{Fellowship} % Award
+	{Department of Mechanical Engineering, University of Minnesota} % Event
+	{Minneapolis, MN} % Location
+	{2012} % Date(s)
+
+	\cvhonor
+	{Dean’s List} % Award
+	{University of Portland} % Event
+	{Portland, OR} % Location
+	{2008-2009} % Date(s)
+	
+	\cvhonor
+	{President’s Scholarship} % Award
+	{University of Portland} % Event
+	{Portland, OR} % Location
+	{2005-2009} % Date(s)
+
+\end{cvhonors}
+
+\cvsection{Conference Presentations \& Invited Talks}
+
+%----------------------------------------------------------------------------------------
+%	SECTION CONTENT
+%----------------------------------------------------------------------------------------
+
+\begin{cventries}
+
+	\cventry
+	{Oral Presentation}
+	{11th European Workshop on the Biology of Cyanobacteria}
+	{2020} % Date(s)
+	{Porto, Portugal} % Location
+	{ % Description(s)
+		\begin{cvitems}
+			\item {\textbf{J.K. Sakkos}, J. Huang, S. Hernandez-Ortiz, \textit{et al.}, Orthogonal degron system for controlled protein degradation in cyanobacteria.}
+		\end{cvitems}
+	}
+	\cventry
+	{Invited Talk}
+	{University of Michigan}
+	{2018} % Date(s)
+	{Ann Arbor, MI} % Location
+	{ % Description(s)
+		\begin{cvitems}
+			\item {“Engineering Biocatalytic Materials: Encapsulation Systems for Biotechnology”}
+		\end{cvitems}
+	}
+
+	\cventry
+	{Poster Presentation}
+	{5th International Conference on Multifunctional, Hybrid and Nanomaterials}
+	{2017} % Date(s)
+	{Lisbon, Portugal} % Location
+	{ % Description(s)
+		\begin{cvitems}
+			\item {\textbf{J. K. Sakkos}, B.R. Mutlu, L. P. Wackett, A. Aksan "Bioregeneration of Ormosil gel for remediation of PAHs from water"}
+			\item {\textbf{J. K. Sakkos}, B.R. Mutlu, L. P. Wackett, A. Aksan "Engineering of a Silica Encapsulation Platform for Hydrocarbon Degradation using \textit{Pseudomonas} sp. NCIB 9816"}
+		\end{cvitems}
+	}
+
+	\cventry
+	{Poster Presentation}
+	{Summer Biomechanics, Bioengineering, and Biotransport Conference}
+	{2016} % Date(s)
+	{National Harbor, MD} % Location
+	{ % Description(s)
+		\begin{cvitems}
+			\item {\textbf{J. K. Sakkos}, L. P. Wackett, A. Aksan "Microbial Regeneration of Adsorbent Silica Gel for Sustainable Treatment of Environmental Pollutants"}
+			\item {G. Heo, \textbf{J. K. Sakkos}, S. Yeom, L. P. Wackett, A. Aksan "Bacterial Growth Inside Reversible Ca-alginate Beads Encapsulated in a Thin Silica Film"}
+		\end{cvitems}
+	}
+	\cventry
+	{Poster Presentation}
+	{University of Minnesota MnDRIVE Environment Symposium}
+	{2016} % Date(s)
+	{Minneapolis, MN} % Location
+	{ % Description(s)
+		\begin{cvitems}
+			\item {B. R. Mutlu, \textbf{J. K. Sakkos}, S. Yeom, L. P. Wackett, A. Aksan "Silica ecosystem for synergistic biotransformation"}
+		\end{cvitems}
+	}
+
+	\cventry
+	{Poster Presentation}
+	{Materials Research Society Fall Meeting}
+	{2015} % Date(s)
+	{Boston, MA} % Location
+	{ % Description(s)
+		\begin{cvitems}
+			\item {\textbf{J. K. Sakkos}, D. P. Kieffer, B.R. Mutlu, L. P. Wackett, A. Aksan "Organic Modification of Silica Gels with Encapsulated \textit{Pseudomonas} sp. NCIB 9816 for Enhanced Biodegradation of Aromatic Hydrocarbons"}
+		\end{cvitems}
+	}
+
+	\cventry
+	{Platform Talk}
+	{Battelle Bioremediation Symposium}
+	{2015} % Date(s)
+	{Miami, FL} % Location
+	{ % Description(s)
+		\begin{cvitems}
+			\item {\textbf{J. K. Sakkos}, D. P. Kieffer, B.R. Mutlu, L. P. Wackett, A. Aksan, "Design of Porous Silica Gels for Biodegradation of Aromatic Hydrocarbons"}
+		\end{cvitems}
+	}
+
+	\cventry
+	{Platform Talk}
+	{Northeast Bioengineering Conference}
+	{2015} % Date(s)
+	{Troy, NY} % Location
+	{ % Description(s)
+		\begin{cvitems}
+			\item {\textbf{J. K. Sakkos}, D. P. Kieffer, B.R. Mutlu, L. P. Wackett, A. Aksan "Design of Porous Silica Gels for Biodegradation of Aromatic Hydrocarbons"}
+		\end{cvitems}
+	}
+	
+\end{cventries}
+%\input{cv-sections/experience.tex}
+\cvsection{Experience}
+
+\begin{cventries}
+	
+	\cventry
+	{Ducat Lab - Michigan State University} % Organization
+	{Postdoctoral Research Associate} % Job title
+	{2018-present} % Date(s)
+	{East Lansing, MI} % Location
+	{ % Description(s) of tasks/responsibilities
+		\begin{cvitems}
+			\item {Developed a tunable protein degradation system in cyanobacteria}
+			\item {Studied a light-driven, modular platform based on cyanobacteria for fundamental insight into emergent microbial interactions within consortia using both computational and experimental methodology}
+			\item {Led a team developing genetic circuits based on quorum sensing for use in cyanobacteria and microbial consortia}
+		\end{cvitems}
+	}
+
+	\cventry
+	{Bioencapsulation Lab - University of Minnesota} % Organization
+	{Research Assistant} % Job title
+	{2012-2018} % Date(s)
+	{Minneapolis, MN} % Location
+	{ % Description(s) of tasks/responsibilities
+		\begin{cvitems}
+			\item {Studied bioencapsulation (physical confinement) of bacteria for applications in biotechnology}
+			\item {Synthesized new porous materials for bioencapsulation}
+			\item {Performed materials characterization on novel materials}
+		\end{cvitems}
+	}
+
+	\cventry
+	{Mechanical Engineering Department - University of Minnesota} % Organization
+	{Teaching Assistant} % Job title
+	{Spring 2018} % Date(s)
+	{Minneapolis, MN} % Location
+	{ % Description(s) of tasks/responsibilities
+		\begin{cvitems}
+			\item {ME 3331 - Thermodynamics}
+		\end{cvitems}
+	}
+
+	\cventry
+	{Columbia Steel Casting Co.} % Organization
+	{Product Engineer} % Job title
+	{2009-2012} % Date(s)
+	{Portland, OR} % Location
+	{ % Description(s) of tasks/responsibilities
+		\begin{cvitems}
+			\item{Designed replacement wear parts for heavy scrap shredders} 
+			\item{Modeled parts and assemblies in SolidWorks, created 2D drawings in AutoCAD} 
+		\end{cvitems}
+	}
+
+	\cventry
+	{Columbia Steel Casting Co.} % Organization
+	{Product Engineer-Intern} % Job title
+	{2007-2009} % Date(s)
+	{Portland, OR} % Location
+	{ % Description(s) of tasks/responsibilities
+	}
+
+	\cventry
+	{County of Sonoma} % Organization
+	{Engineering Tech. I} % Job title
+	{May. 2006 - Aug. 2006} % Date(s)
+	{Santa Rosa, CA} % Location
+	{
+	}
+	
+\end{cventries}
+%\input{cv-sections/students.tex}
+%\newpage
+\cvsection{Mentoring \& Outreach}%{Graduate Rotation Students Mentored (8 weeks each)}
+
+\begin{cventries}
+	
+	
+	\cventry
+	{Computational modelling subteam}
+	{International Genetically Engineered Machine Team (iGEM)}
+	{June - November 2021}
+	{Michigan State University}
+	{
+	  \begin{cvitems}
+		\item {Worked on developing Individual-based Models to simulate microbial populations}
+	  \end{cvitems}
+	}
+	\cventry
+	{Graduate student}
+	{Rees Rillema}
+	{January - February 2021}
+	{Michigan State University}
+	{
+	  \begin{cvitems}
+	    \item {Worked on cloning genetic circuits into cyanobacteria and flow cytometry assays}
+	    \item {Primary co-author on a manuscript resulting from this work}
+	  \end{cvitems}
+	}	
+	\cventry
+	{Graduate student}
+	{Manos Kokarakis}
+	{September - November 2020}
+	{Michigan State University}
+	{
+		\begin{cvitems}
+			\item {Worked on cloning genetic circuits into cyanobacteria and \textit{E. coli}}
+			\item {Primary co-author on a manuscript resulting from this work}
+		\end{cvitems}
+	}
+	\cventry
+	{Graduate student}
+	{Joshua Kaste}
+	{January - February 2020}
+	{Michigan State University}
+	{
+		\begin{cvitems}
+			\item {Worked on cloning genetic circuits into cyanobacteria}
+		\end{cvitems}
+	}
+	
+	\cventry
+	{Graduate student}
+	{Serena Lotreck}
+	{November - December 2019}
+	{Michigan State University}
+	{
+		\begin{cvitems}
+			\item {Worked on cloning genetic circuits into cyanobacteria and prepared samples for flow cytometry}
+		\end{cvitems}	
+}
+	
+	\cventry
+	{Graduate student}
+	{Nick Schlecht}
+	{September - October 2019}
+	{Michigan State University}
+	{
+		\begin{cvitems}
+			\item {Worked on cloning genetic circuits into cyanobacteria and prepared samples for flow cytometry}
+		\end{cvitems}	
+}
+	
+	\cventry
+	{Graduate student}
+	{Sergio Hernandez-Ortiz}
+	{July - August 2019}
+	{Michigan State University}
+	{
+		\begin{cvitems}
+			\item {Prepared samples for flow cytometry and conducted photosynthetic efficiency assays towards a publication}
+		\end{cvitems}		
+}
+	\cventry
+	{Undergraduate}
+	{Kam Kennicott}
+	{April 2019 - June 2020}
+	{Michigan State University}
+	{
+		\begin{cvitems}
+			\item {Prepared samples for flow cytometry and worked on cloning}
+		\end{cvitems}		
+	}
+	\cventry
+	{Undergraduate}
+	{Ezgi Evcik}
+	{University of Minnesota}
+	{May 2018 - September 2018}
+	{
+		\begin{cvitems}
+			\item {Conducted biochemical assays related to cyanuric acid biodegradation, bioencapsulation, and mechanical testing}
+			\item {Now a Systems Engineer at Roche}
+		\end{cvitems}		
+	}
+	\cventry
+	{Public Outreach}
+	{Science A.M.A.}
+	{Reddit r/Science}
+	{2016}
+	{
+		\begin{cvitems}
+			\item {J.K. Sakkos, r/Science. “Science AMA Series: I’m Jonathan Sakkos, a graduate student in mechanical engineering at the University of Minnesota. I trap bacteria within porous materials for cleaning pollutants from water. AMA!” \textit{The Winnower} 2016.}
+		\end{cvitems}		
+	}
+
+	
+	\cventry
+	{Undergraduate}
+	{Meera Harihara}
+	{January 2016 - July 2016}
+	{University of Minnesota}
+	{
+		\begin{cvitems}
+			\item {Conducted biochemical assays and mechanical testing}
+		\end{cvitems}		
+	}
+	\cventry
+	{Undergraduate}
+	{Daniel P. Kieffer}
+	{December 2013 - December 2015}
+	{University of Minnesota}
+	{
+		\begin{cvitems}
+			\item {Performed mechanical and biological assays contributing to a co-authorship on a peer-reviewed publication}
+			\item {Now a J.D. Candidate at University of Iowa College of Law}
+		\end{cvitems}		
+	}	
+	\cventry
+	{Undergraduate}
+	{Amanda Eidem}
+	{January 2013 - January 2014}
+	{University of Minnesota}
+	{
+		\begin{cvitems}
+			\item {Performed mechanical testing, bioencapsulation, and biodegradation assays}
+		\end{cvitems}		
+	}	
+	\cventry
+	{Undergraduate}
+	{James Bienieck}
+	{September 2013 - June 2014}
+	{University of Minnesota}
+	{
+		\begin{cvitems}
+			\item {Worked on developing mechanical testing protocols}
+			\item {Now a Manufacturing Engineer at Collins Aerospace}
+		\end{cvitems}		
+	}	
+	\cventry
+	{Undergraduate}
+	{Kanav Khosla}
+	{January 2013 - May 2013}
+	{University of Minnesota}
+	{
+	}
+\end{cventries}
 
 %----------------------------------------------------------------------------------------
 
+\end{sloppypar}
 \end{document}
